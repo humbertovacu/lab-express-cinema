@@ -1,14 +1,23 @@
 {{#with singleMovie}}
-    <h1>{{title}}</h1>
-    <img src="{{image}}" alt="movie">
-    <h2>By: {{director}}</h2>
-    <h2>Stars: </h2>
-    <ul>
-        {{#each stars}}
-            <li>{{this}}</li>
-        {{/each}}
-    </ul>
-    <h2>Description:</h2>
-    <p>{{description}}<p>
-    {{#each showtimes}}<p>{{this}}|</p>{{/each}}
+    <h1 class="page-title">{{title}}</h1>
+    <section class="movie-details">
+        
+        <img src="{{image}}" alt="movie">
+        <h2>By: {{director}}</h2>
+            <div>
+                <h2>Stars: </h2>
+                <ul>
+                    {{#each stars}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        <h2>Description:</h2>
+        <p>{{description}}<p>
+            <div class="showtimes">
+                {{#each showtimes}}
+                    <p>{{this}} |</p>
+                {{/each}}
+            </div>
+    </section>
 {{/with}}
